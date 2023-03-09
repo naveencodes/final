@@ -1,0 +1,18 @@
+
+<div class="container pt-5 pb-5">
+  <div class="col-12">
+      <div class="d-flex flex-wrap justify-content-between">
+          <div class="card shadow mt-2">
+              <div class="card-body">
+                  <h5 class="card-title">My Blog</h5>
+                  <h3>AddPost</h3>
+                  <app-addpost></app-addpost>
+                  <app-post-collection class="book-collection" [collection]="(postCollection$ | async)!">
+                  </app-post-collection>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<h2>My Post</h2>
+<app-post class="post-list" [posts]="(posts$ | async)!"></app-post>
